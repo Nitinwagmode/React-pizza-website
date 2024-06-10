@@ -1,0 +1,79 @@
+/* Styles/navbar.css */
+.navbar {
+  width: 100%;
+  height: 100px;
+  background-color: #121619;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .leftSide {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .leftSide img {
+  width: 70px;
+}
+
+.navbar .rightSide {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.navbar .rightSide svg {
+  font-size: 40px;
+}
+
+/* Hidden Links Styling */
+.hiddenlinks {
+  display: none; /* Hidden by default */
+}
+
+.hiddenlinks.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100px; /* Adjust to match your navbar height */
+  right: 20px;
+  background-color: #121619;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.hiddenlinks a {
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .rightSide a {
+    display: none; /* Hide links on smaller screens */
+  }
+
+  .navbar .rightSide button {
+    display: block; /* Show button on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .leftSide {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
+}
